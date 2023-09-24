@@ -3,12 +3,18 @@ document.getElementById('formulario').addEventListener('submit', function(event)
  event.preventDefault(); // Previne o comportamento padrão do formulário
 
  // Coleta os dados do formulário
- const nome = document.getElementById('nome').value;
- const email = document.getElementById('email').value;
- const telefone = document.getElementById('telefone').value;
+ let nome = document.getElementById('nome').value;
+ let cpf = document.getElementById('cpf').value;
+ let cnpj  = document.getElementById('cnpj').value;
+ let servico = document.getElementById('servico')
+ let cidade = document.getElementById('cidade').value;
+ let bairro = document.getElementById('bairro').value;
+ let rua = document.getElementById('rua')
+ let numero= document.getElementById('numero').value;
+})
 
  // Cria um objeto com os dados do usuário
- const prestador = {
+ let prestador = {
     nome: nome,
     email: email,
     telefone: telefone
@@ -27,4 +33,3 @@ document.getElementById('formulario').addEventListener('submit', function(event)
     console.log('Prestador de serviço cadastrado com sucesso:', data);
     // Exibe um modal de confirmação ou redireciona para outra página
  })
-})
